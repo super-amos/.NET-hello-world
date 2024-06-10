@@ -27,5 +27,5 @@ steps:
       command: publish
       publishDirectory: '$(Build.ArtifactStagingDirectory)'
       vstsFeedPublish: 'hello-world'
-      vstsFeedPackagePublish: 'hello-world'
+      vstsFeedPackagePublish: 'hello-artifact'
       packagePublishDescription: '<Package description>'
