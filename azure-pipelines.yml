@@ -20,14 +20,12 @@ steps:
       command: 'build'
       configuration: $(buildConfiguration)
 
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: 'test'
-      configuration: $(buildConfiguration)
 
-  - task: PublishBuildArtifacts@1
+  - task: UniversalPackages@0
+    displayName: Publish a Universal Package
     inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-      ArtifactName: 'drop'
-      publishLocation: 'Container'
-      StoreAsTar: true
+      command: publish
+      publishDirectory: '$(Build.ArtifactStagingDirectory)'
+      vstsFeedPublish: 'hello-world'
+      vstsFeedPackagePublish: 'hello-world'
+      packagePublishDescription: '<Package description>'
