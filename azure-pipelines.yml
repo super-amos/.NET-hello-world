@@ -21,11 +21,14 @@ steps:
       configuration: $(buildConfiguration)
 
 
-  - task: UniversalPackages@0
-    displayName: Publish a Universal Package
+  - task: NuGetCommand@2
+    displayName: 'nuget push'
     inputs:
-      command: publish
-      publishDirectory: '$(Build.ArtifactStagingDirectory)'
-      vstsFeedPublish: 'amosshlomovich'
-      vstsFeedPackagePublish: 'hello-world'
-      packagePublishDescription: '<Package description>'
+      command: 'push'
+      feedsToUse: 'select'
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+      nuGetFeedType: 'internal'
+      vstsFeed: 'amosshlomovich'
+      publishVstsFeed: 'amosshlomovich'
+      versioningScheme: 'off'
+      allowPackageConflicts: true
