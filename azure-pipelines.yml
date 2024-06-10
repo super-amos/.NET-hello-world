@@ -22,13 +22,10 @@ steps:
 
 
   - task: NuGetCommand@2
-    displayName: 'nuget push'
+    displayName: 'NuGet push'
     inputs:
       command: 'push'
-      feedsToUse: 'select'
       packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
       nuGetFeedType: 'internal'
-      vstsFeed: 'amosshlomovich'
-      publishVstsFeed: 'amosshlomovich'
-      versioningScheme: 'off'
+      publishVstsFeed: 'hello-world/hello-world'
       allowPackageConflicts: true
