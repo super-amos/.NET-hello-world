@@ -1,0 +1,14 @@
+/home/amoss/infinity/git/devops/azure_devops/hello-world/bin/Debug/net8.0/hello-world
+/home/amoss/infinity/git/devops/azure_devops/hello-world/bin/Debug/net8.0/hello-world.deps.json
+/home/amoss/infinity/git/devops/azure_devops/hello-world/bin/Debug/net8.0/hello-world.runtimeconfig.json
+/home/amoss/infinity/git/devops/azure_devops/hello-world/bin/Debug/net8.0/hello-world.dll
+/home/amoss/infinity/git/devops/azure_devops/hello-world/bin/Debug/net8.0/hello-world.pdb
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/hello-world.GeneratedMSBuildEditorConfig.editorconfig
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/hello-world.AssemblyInfoInputs.cache
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/hello-world.AssemblyInfo.cs
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/hello-world.csproj.CoreCompileInputs.cache
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/hello-world.dll
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/refint/hello-world.dll
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/hello-world.pdb
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/hello-world.genruntimeconfig.cache
+/home/amoss/infinity/git/devops/azure_devops/hello-world/obj/Debug/net8.0/ref/hello-world.dll
