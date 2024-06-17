@@ -11,7 +11,6 @@ pool: my-comp
 variables:
   buildConfiguration: 'Release'
 
-
 steps:
 
 
@@ -20,7 +19,7 @@ steps:
       command: 'build'
       configuration: $(buildConfiguration)
       projects: "**/*.csproj"
-
+      versioningScheme: byBuildNumber
   - task: DotNetCoreCLI@2
     inputs:
       command: 'pack'
