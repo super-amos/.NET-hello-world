@@ -6,7 +6,7 @@
 trigger:  
   - main
 
-pool: default
+pool: my-comp
 
 variables:
   buildConfiguration: 'Release'
@@ -14,10 +14,6 @@ variables:
 
 steps:
 
-  - task: NuGetToolInstaller@1
-    inputs:
-      versionSpec: '5.5.1'
-      checkLatest: true
 
   - task: DotNetCoreCLI@2
     inputs:
