@@ -12,7 +12,7 @@ variables:
   buildConfiguration: 'Release'
   major: 1
   minor: 1
-  patch: 0
+  patch: counter(variables['major'], 0)]
   myversion: $(major).$(minor).$(patch)
 steps:
   - task: DotNetCoreCLI@2
