@@ -6,25 +6,30 @@
 trigger:  
   - main
 
-pool: my-comp
+pool: default
 
 variables:
   buildConfiguration: 'Release'
 
 
 steps:
+
+  - task: NuGetToolInstaller@1
+    inputs:
+      versionSpec: '5.5.1'
+      checkLatest: true
+
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
       configuration: $(buildConfiguration)
       projects: "**/*.csproj"
-    
+
   - task: DotNetCoreCLI@2
     inputs:
       command: 'pack'
       packagesToPack: '**/*.csproj'
-      versioningScheme: 'byBuildNumber'
-      verbosityPack: 'Detailed'
+
 
   - task: DotNetCoreCLI@2
     inputs:
@@ -32,4 +37,4 @@ steps:
       packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
       nuGetFeedType: 'internal'
       publishVstsFeed: '317f01e8-1d31-48f2-9477-d1c1aca0a01d/3780be0b-e340-40f7-9d34-a900b0cf58be'
-
+  
